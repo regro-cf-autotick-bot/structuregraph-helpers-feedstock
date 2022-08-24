@@ -1,5 +1,5 @@
 {% set name = "structuregraph-helpers" %}
-{% set version = "0.0.4" %}
+{% set version = "0.0.9" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/structuregraph_helpers-{{ version }}.tar.gz
-  sha256: 8b21a4cf58de1920715ee4ffaf2933ac0a808b7a495382ec9e7020a82b7b74f6
+  sha256: b7e05a080c832c53fc7d48f8a91653c95ec4ea79e5e199dc6d2e3adb6a6eb644
 
 build:
   noarch: python
@@ -18,10 +18,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.7
   run:
-    - python >=3.6
+    - python >=3.7
     - pymatgen
+    - pyyaml
 
 test:
   imports:
